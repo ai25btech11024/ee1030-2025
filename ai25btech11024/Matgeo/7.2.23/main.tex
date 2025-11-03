@@ -1,0 +1,108 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                               
+
+\def\inputGnumericTable{}                      
+\usepackage[latin1]{inputenc}                    
+\usepackage{color}                              
+\usepackage{array}                             
+\usepackage{longtable}                          
+\usepackage{calc}                               
+\usepackage{multirow}                           
+\usepackage{hhline}                            
+\usepackage{ifthen}                          
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{7.2.23}
+\author{AI25BTECH11024 - Pratyush Panda
+}
+\maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\textbf{Question: } \\
+The area of the circle centred at $\brak{1,2}$ and passing through $\brak{4,6}$ is
+\begin{enumerate}
+\item $5\pi$
+\item $10\pi$
+\item $25\pi$
+\item None of the above
+\end{enumerate}
+\vspace{0.7cm}
+
+\renewcommand{\theequation}{0.\arabic{equation}}
+
+\textbf{Solution: } \\
+The centre of the circle is given to us as $\Vec{c}=\myvec{1 \\ 2}$.
+Thus we can write the $\Vec{u}$ as:
+\begin{align}
+\Vec{u}=-\Vec{c}=\myvec{-1 \\ -2}
+\end{align}
+
+We also know that $f=||\Vec{c}||^2-r^2$, where $r$ is the radius of the circle.\\
+
+To find the area of the circle we need to find the radius of the circle. For that we can use the equation of circle.\\
+The equation of the circle can be written as;
+\begin{align}
+||\Vec{x}||^2+2\Vec{u}^T\Vec{x}+f=0 \\
+or, \, ||\Vec{x}||^2+2\Vec{u}^T\Vec{x}+||\Vec{c}||^2-r^2=0 \\
+\implies r^2=||\Vec{x}||^2+2\Vec{u}^T\Vec{x}+||\Vec{c}||^2 
+\end{align}
+where $\Vec{x}$ is any point on the circle \\
+Since we are given that $\brak{4,6}$ is a point on the circle, we can put $\Vec{x}=\myvec{4 \\ 6}$
+
+On putting the values in the equation $\brak{0.3}$, we get;
+\begin{align}
+r^2=52-32+5=25
+\end{align}
+Thus, the area of the circle$\brak{A}$ will be:
+\begin{align}
+A=\pi r^2=25\pi
+\end{align}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\columnwidth]{figs/img.png}
+\caption*{}
+\end{figure}
+
+\end{document}
